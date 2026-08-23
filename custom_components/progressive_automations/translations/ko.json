@@ -1,0 +1,161 @@
+{
+  "title": "Progressive Automations",
+  "config": {
+    "step": {
+      "scan_results": {
+        "title": "Select RT-BT1",
+        "description": "Select the Progressive Automations RT-BT1 Bluetooth interface connected to your actuator system.",
+        "data": {
+          "Auto Discovery": "자동 검색"
+        }
+      },
+      "no_devices": {
+        "title": "액추에이터 제어를 찾을 수 없음",
+        "description": "호환되는 Progressive Automations Bluetooth 어댑터를 찾지 못했습니다. 전원이 켜져 있고 Progressive Motion, nRF Connect 또는 다른 Bluetooth 중앙 장치에서 연결 해제되어 있는지 확인하세요.",
+        "data": {
+          "address": "Bluetooth 주소"
+        }
+      },
+      "no_scanner": {
+        "title": "Bluetooth 스캐너를 사용할 수 없음",
+        "description": "현재 Home Assistant에서 연결 가능한 Bluetooth 스캐너를 사용할 수 없습니다.",
+        "data": {
+          "address": "Bluetooth 주소"
+        }
+      },
+      "manual": {
+        "title": "Bluetooth 주소 입력",
+        "description": "액추에이터 시스템에서 사용하는 Progressive Automations Bluetooth 어댑터의 Bluetooth 주소를 입력하세요.",
+        "data": {
+          "address": "Bluetooth 주소"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "Add RT-BT1",
+        "description": "Home Assistant found an RT-BT1. Add the actuator system as Bluetooth Actuator Control?"
+      }
+    },
+    "error": {
+      "invalid_address": "AA:BB:CC:DD:EE:FF 형식의 Bluetooth MAC 주소를 입력하세요."
+    },
+    "abort": {
+      "already_configured": "이 Bluetooth 액추에이터 제어는 이미 구성되어 있습니다.",
+      "not_supported": "이 Bluetooth 장치는 지원되는 Progressive Automations 어댑터가 아닙니다."
+    },
+    "flow_title": "Bluetooth 액추에이터 제어"
+  },
+  "device": {
+    "bluetooth_actuator_control": {
+      "name": "Bluetooth 액추에이터 제어"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "extension": {
+        "name": "확장 길이"
+      },
+      "rssi": {
+        "name": "Bluetooth 신호 강도"
+      },
+      "controller_error_code": {
+        "name": "Controller error code"
+      },
+      "position_percentage": {
+        "name": "위치 백분율"
+      },
+      "position_calibration": {
+        "name": "Position Calibration",
+        "state": {
+          "required": "Required",
+          "calibrating": "Calibrating",
+          "calibrated": "Calibrated"
+        }
+      },
+      "lower_travel_limit": {
+        "name": "Lower Travel Limit"
+      },
+      "upper_travel_limit": {
+        "name": "Upper Travel Limit"
+      },
+      "operation_status": {
+        "name": "Operation Status"
+      },
+      "last_successful_communication": {
+        "name": "Last successful communication"
+      },
+      "last_command": {
+        "name": "Last command"
+      },
+      "last_command_result": {
+        "name": "Last command result"
+      },
+      "last_error": {
+        "name": "Last error"
+      }
+    },
+    "button": {
+      "preset_1": {
+        "name": "프리셋 1"
+      },
+      "preset_2": {
+        "name": "프리셋 2"
+      },
+      "preset_3": {
+        "name": "프리셋 3"
+      },
+      "preset_4": {
+        "name": "프리셋 4"
+      },
+      "extend": {
+        "name": "확장"
+      },
+      "retract": {
+        "name": "수축"
+      },
+      "fully_extend": {
+        "name": "완전히 확장"
+      },
+      "fully_retract": {
+        "name": "완전히 수축"
+      },
+      "stop": {
+        "name": "정지"
+      },
+      "calibrate_position_range": {
+        "name": "Calibrate Position Range"
+      },
+      "set_lower_travel_limit": {
+        "name": "Set Lower Travel Limit"
+      },
+      "set_upper_travel_limit": {
+        "name": "Set Upper Travel Limit"
+      },
+      "reset_travel_limits": {
+        "name": "Reset Travel Limits"
+      },
+      "rst_rehome_actuator": {
+        "name": "RST Re-home Actuator"
+      }
+    },
+    "switch": {
+      "program_preset": {
+        "name": "프리셋 설정"
+      }
+    },
+    "binary_sensor": {
+      "communication_status": {
+        "name": "통신 상태"
+      }
+    },
+    "number": {
+      "position_percentage_control": {
+        "name": "위치 백분율"
+      }
+    },
+    "lock": {
+      "control_lock": {
+        "name": "제어 잠금"
+      }
+    }
+  }
+}

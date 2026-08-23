@@ -50,7 +50,7 @@ The stable release was validated on Home Assistant 2026.8.x. Older Home Assistan
 Until this project is accepted into HACS's default repository list, add it as a custom repository:
 
 1. Open HACS in Home Assistant.
-2. Add `https://github.com/roweboat123/progressive-automations-home-assistant` as a **Custom repository** of type **Integration**.
+2. Add `https://github.com/__GITHUB_OWNER__/progressive-automations-home-assistant` as a **Custom repository** of type **Integration**.
 3. Install **Progressive Automations**.
 4. Restart Home Assistant.
 5. Go to **Settings → Devices & services → Add Integration** and search for **Progressive Automations**.

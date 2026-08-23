@@ -1,0 +1,161 @@
+{
+  "title": "Progressive Automations",
+  "config": {
+    "step": {
+      "scan_results": {
+        "title": "Select RT-BT1",
+        "description": "Select the Progressive Automations RT-BT1 Bluetooth interface connected to your actuator system.",
+        "data": {
+          "Auto Discovery": "自動検出"
+        }
+      },
+      "no_devices": {
+        "title": "アクチュエータ制御が見つかりません",
+        "description": "対応するProgressive Automations Bluetoothアダプターが見つかりませんでした。電源が入っており、Progressive Motion、nRF Connect、または他のBluetoothセントラルから切断されていることを確認してください。",
+        "data": {
+          "address": "Bluetoothアドレス"
+        }
+      },
+      "no_scanner": {
+        "title": "Bluetoothスキャナーを利用できません",
+        "description": "Home Assistantで接続可能なBluetoothスキャナーを現在利用できません。",
+        "data": {
+          "address": "Bluetoothアドレス"
+        }
+      },
+      "manual": {
+        "title": "Bluetoothアドレスを入力",
+        "description": "アクチュエータシステムで使用しているProgressive Automations BluetoothアダプターのBluetoothアドレスを入力してください。",
+        "data": {
+          "address": "Bluetoothアドレス"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "Add RT-BT1",
+        "description": "Home Assistant found an RT-BT1. Add the actuator system as Bluetooth Actuator Control?"
+      }
+    },
+    "error": {
+      "invalid_address": "AA:BB:CC:DD:EE:FF のようなBluetooth MACアドレスを入力してください。"
+    },
+    "abort": {
+      "already_configured": "このBluetoothアクチュエータ制御はすでに設定されています。",
+      "not_supported": "このBluetoothデバイスは対応するProgressive Automationsアダプターではありません。"
+    },
+    "flow_title": "Bluetoothアクチュエータ制御"
+  },
+  "device": {
+    "bluetooth_actuator_control": {
+      "name": "Bluetoothアクチュエータ制御"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "extension": {
+        "name": "伸長量"
+      },
+      "rssi": {
+        "name": "Bluetooth信号強度"
+      },
+      "controller_error_code": {
+        "name": "Controller error code"
+      },
+      "position_percentage": {
+        "name": "位置（%）"
+      },
+      "position_calibration": {
+        "name": "Position Calibration",
+        "state": {
+          "required": "Required",
+          "calibrating": "Calibrating",
+          "calibrated": "Calibrated"
+        }
+      },
+      "lower_travel_limit": {
+        "name": "Lower Travel Limit"
+      },
+      "upper_travel_limit": {
+        "name": "Upper Travel Limit"
+      },
+      "operation_status": {
+        "name": "Operation Status"
+      },
+      "last_successful_communication": {
+        "name": "Last successful communication"
+      },
+      "last_command": {
+        "name": "Last command"
+      },
+      "last_command_result": {
+        "name": "Last command result"
+      },
+      "last_error": {
+        "name": "Last error"
+      }
+    },
+    "button": {
+      "preset_1": {
+        "name": "プリセット1"
+      },
+      "preset_2": {
+        "name": "プリセット2"
+      },
+      "preset_3": {
+        "name": "プリセット3"
+      },
+      "preset_4": {
+        "name": "プリセット4"
+      },
+      "extend": {
+        "name": "伸ばす"
+      },
+      "retract": {
+        "name": "縮める"
+      },
+      "fully_extend": {
+        "name": "完全に伸ばす"
+      },
+      "fully_retract": {
+        "name": "完全に縮める"
+      },
+      "stop": {
+        "name": "停止"
+      },
+      "calibrate_position_range": {
+        "name": "Calibrate Position Range"
+      },
+      "set_lower_travel_limit": {
+        "name": "Set Lower Travel Limit"
+      },
+      "set_upper_travel_limit": {
+        "name": "Set Upper Travel Limit"
+      },
+      "reset_travel_limits": {
+        "name": "Reset Travel Limits"
+      },
+      "rst_rehome_actuator": {
+        "name": "RST Re-home Actuator"
+      }
+    },
+    "switch": {
+      "program_preset": {
+        "name": "プリセットを登録"
+      }
+    },
+    "binary_sensor": {
+      "communication_status": {
+        "name": "通信状態"
+      }
+    },
+    "number": {
+      "position_percentage_control": {
+        "name": "位置（%）"
+      }
+    },
+    "lock": {
+      "control_lock": {
+        "name": "操作ロック"
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "title": "Progressive Automations",
+  "config": {
+    "step": {
+      "scan_results": {
+        "title": "Select RT-BT1",
+        "description": "Select the Progressive Automations RT-BT1 Bluetooth interface connected to your actuator system.",
+        "data": {
+          "Auto Discovery": "Rilevamento automatico"
+        }
+      },
+      "no_devices": {
+        "title": "Nessun controllo attuatore trovato",
+        "description": "Non è stato trovato alcun adattatore Bluetooth Progressive Automations compatibile. Verifica che sia acceso e scollegato da Progressive Motion, nRF Connect o da un altro central Bluetooth.",
+        "data": {
+          "address": "Indirizzo Bluetooth"
+        }
+      },
+      "no_scanner": {
+        "title": "Scanner Bluetooth non disponibile",
+        "description": "Home Assistant non dispone attualmente di uno scanner Bluetooth in grado di stabilire connessioni.",
+        "data": {
+          "address": "Indirizzo Bluetooth"
+        }
+      },
+      "manual": {
+        "title": "Inserisci indirizzo Bluetooth",
+        "description": "Inserisci l’indirizzo Bluetooth dell’adattatore Progressive Automations utilizzato dal tuo sistema attuatore.",
+        "data": {
+          "address": "Indirizzo Bluetooth"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "Add RT-BT1",
+        "description": "Home Assistant found an RT-BT1. Add the actuator system as Bluetooth Actuator Control?"
+      }
+    },
+    "error": {
+      "invalid_address": "Inserisci un indirizzo MAC Bluetooth come AA:BB:CC:DD:EE:FF."
+    },
+    "abort": {
+      "already_configured": "Questo controllo attuatore Bluetooth è già configurato.",
+      "not_supported": "Questo dispositivo Bluetooth non è un adattatore Progressive Automations supportato."
+    },
+    "flow_title": "Controllo attuatore Bluetooth"
+  },
+  "device": {
+    "bluetooth_actuator_control": {
+      "name": "Controllo attuatore Bluetooth"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "extension": {
+        "name": "Estensione"
+      },
+      "rssi": {
+        "name": "Potenza segnale Bluetooth"
+      },
+      "controller_error_code": {
+        "name": "Controller error code"
+      },
+      "position_percentage": {
+        "name": "Percentuale posizione"
+      },
+      "position_calibration": {
+        "name": "Position Calibration",
+        "state": {
+          "required": "Required",
+          "calibrating": "Calibrating",
+          "calibrated": "Calibrated"
+        }
+      },
+      "lower_travel_limit": {
+        "name": "Lower Travel Limit"
+      },
+      "upper_travel_limit": {
+        "name": "Upper Travel Limit"
+      },
+      "operation_status": {
+        "name": "Operation Status"
+      },
+      "last_successful_communication": {
+        "name": "Last successful communication"
+      },
+      "last_command": {
+        "name": "Last command"
+      },
+      "last_command_result": {
+        "name": "Last command result"
+      },
+      "last_error": {
+        "name": "Last error"
+      }
+    },
+    "button": {
+      "preset_1": {
+        "name": "Preimpostazione 1"
+      },
+      "preset_2": {
+        "name": "Preimpostazione 2"
+      },
+      "preset_3": {
+        "name": "Preimpostazione 3"
+      },
+      "preset_4": {
+        "name": "Preimpostazione 4"
+      },
+      "extend": {
+        "name": "Estendi"
+      },
+      "retract": {
+        "name": "Ritira"
+      },
+      "fully_extend": {
+        "name": "Estendi completamente"
+      },
+      "fully_retract": {
+        "name": "Ritira completamente"
+      },
+      "stop": {
+        "name": "Arresta"
+      },
+      "calibrate_position_range": {
+        "name": "Calibrate Position Range"
+      },
+      "set_lower_travel_limit": {
+        "name": "Set Lower Travel Limit"
+      },
+      "set_upper_travel_limit": {
+        "name": "Set Upper Travel Limit"
+      },
+      "reset_travel_limits": {
+        "name": "Reset Travel Limits"
+      },
+      "rst_rehome_actuator": {
+        "name": "RST Re-home Actuator"
+      }
+    },
+    "switch": {
+      "program_preset": {
+        "name": "Programma preimpostazione"
+      }
+    },
+    "binary_sensor": {
+      "communication_status": {
+        "name": "Stato comunicazione"
+      }
+    },
+    "number": {
+      "position_percentage_control": {
+        "name": "Percentuale posizione"
+      }
+    },
+    "lock": {
+      "control_lock": {
+        "name": "Blocco comandi"
+      }
+    }
+  }
+}

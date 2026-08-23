@@ -1,0 +1,161 @@
+{
+  "title": "Progressive Automations",
+  "config": {
+    "step": {
+      "scan_results": {
+        "title": "Select RT-BT1",
+        "description": "Select the Progressive Automations RT-BT1 Bluetooth interface connected to your actuator system.",
+        "data": {
+          "Auto Discovery": "自动发现"
+        }
+      },
+      "no_devices": {
+        "title": "未找到执行器控制",
+        "description": "未找到兼容的 Progressive Automations 蓝牙适配器。请确认其已通电，并已与 Progressive Motion、nRF Connect 或其他蓝牙中央设备断开连接。",
+        "data": {
+          "address": "蓝牙地址"
+        }
+      },
+      "no_scanner": {
+        "title": "蓝牙扫描器不可用",
+        "description": "Home Assistant 当前没有可用于建立连接的蓝牙扫描器。",
+        "data": {
+          "address": "蓝牙地址"
+        }
+      },
+      "manual": {
+        "title": "输入蓝牙地址",
+        "description": "请输入执行器系统所使用的 Progressive Automations 蓝牙适配器地址。",
+        "data": {
+          "address": "蓝牙地址"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "Add RT-BT1",
+        "description": "Home Assistant found an RT-BT1. Add the actuator system as Bluetooth Actuator Control?"
+      }
+    },
+    "error": {
+      "invalid_address": "请输入类似 AA:BB:CC:DD:EE:FF 的蓝牙 MAC 地址。"
+    },
+    "abort": {
+      "already_configured": "此蓝牙执行器控制已配置。",
+      "not_supported": "此蓝牙设备不是受支持的 Progressive Automations 适配器。"
+    },
+    "flow_title": "蓝牙执行器控制"
+  },
+  "device": {
+    "bluetooth_actuator_control": {
+      "name": "蓝牙执行器控制"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "extension": {
+        "name": "伸出长度"
+      },
+      "rssi": {
+        "name": "蓝牙信号强度"
+      },
+      "controller_error_code": {
+        "name": "Controller error code"
+      },
+      "position_percentage": {
+        "name": "位置百分比"
+      },
+      "position_calibration": {
+        "name": "Position Calibration",
+        "state": {
+          "required": "Required",
+          "calibrating": "Calibrating",
+          "calibrated": "Calibrated"
+        }
+      },
+      "lower_travel_limit": {
+        "name": "Lower Travel Limit"
+      },
+      "upper_travel_limit": {
+        "name": "Upper Travel Limit"
+      },
+      "operation_status": {
+        "name": "Operation Status"
+      },
+      "last_successful_communication": {
+        "name": "Last successful communication"
+      },
+      "last_command": {
+        "name": "Last command"
+      },
+      "last_command_result": {
+        "name": "Last command result"
+      },
+      "last_error": {
+        "name": "Last error"
+      }
+    },
+    "button": {
+      "preset_1": {
+        "name": "预设 1"
+      },
+      "preset_2": {
+        "name": "预设 2"
+      },
+      "preset_3": {
+        "name": "预设 3"
+      },
+      "preset_4": {
+        "name": "预设 4"
+      },
+      "extend": {
+        "name": "伸出"
+      },
+      "retract": {
+        "name": "缩回"
+      },
+      "fully_extend": {
+        "name": "完全伸出"
+      },
+      "fully_retract": {
+        "name": "完全缩回"
+      },
+      "stop": {
+        "name": "停止"
+      },
+      "calibrate_position_range": {
+        "name": "Calibrate Position Range"
+      },
+      "set_lower_travel_limit": {
+        "name": "Set Lower Travel Limit"
+      },
+      "set_upper_travel_limit": {
+        "name": "Set Upper Travel Limit"
+      },
+      "reset_travel_limits": {
+        "name": "Reset Travel Limits"
+      },
+      "rst_rehome_actuator": {
+        "name": "RST Re-home Actuator"
+      }
+    },
+    "switch": {
+      "program_preset": {
+        "name": "设置预设"
+      }
+    },
+    "binary_sensor": {
+      "communication_status": {
+        "name": "通信状态"
+      }
+    },
+    "number": {
+      "position_percentage_control": {
+        "name": "位置百分比"
+      }
+    },
+    "lock": {
+      "control_lock": {
+        "name": "控制锁"
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "title": "Progressive Automations",
+  "config": {
+    "step": {
+      "scan_results": {
+        "title": "Select RT-BT1",
+        "description": "Select the Progressive Automations RT-BT1 Bluetooth interface connected to your actuator system.",
+        "data": {
+          "Auto Discovery": "Automatische detectie"
+        }
+      },
+      "no_devices": {
+        "title": "Geen actuatorbesturing gevonden",
+        "description": "Er is geen compatibele Progressive Automations Bluetooth-adapter gevonden. Controleer of deze is ingeschakeld en niet verbonden is met Progressive Motion, nRF Connect of een andere Bluetooth-central.",
+        "data": {
+          "address": "Bluetooth-adres"
+        }
+      },
+      "no_scanner": {
+        "title": "Bluetooth-scanner niet beschikbaar",
+        "description": "Home Assistant heeft momenteel geen Bluetooth-scanner beschikbaar waarmee verbinding kan worden gemaakt.",
+        "data": {
+          "address": "Bluetooth-adres"
+        }
+      },
+      "manual": {
+        "title": "Bluetooth-adres invoeren",
+        "description": "Voer het Bluetooth-adres in van de Progressive Automations Bluetooth-adapter die door je actuatorsysteem wordt gebruikt.",
+        "data": {
+          "address": "Bluetooth-adres"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "Add RT-BT1",
+        "description": "Home Assistant found an RT-BT1. Add the actuator system as Bluetooth Actuator Control?"
+      }
+    },
+    "error": {
+      "invalid_address": "Voer een Bluetooth-MAC-adres in, zoals AA:BB:CC:DD:EE:FF."
+    },
+    "abort": {
+      "already_configured": "Deze Bluetooth-actuatorbesturing is al geconfigureerd.",
+      "not_supported": "Dit Bluetooth-apparaat is geen ondersteunde Progressive Automations-adapter."
+    },
+    "flow_title": "Bluetooth-actuatorbesturing"
+  },
+  "device": {
+    "bluetooth_actuator_control": {
+      "name": "Bluetooth-actuatorbesturing"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "extension": {
+        "name": "Uitschuiflengte"
+      },
+      "rssi": {
+        "name": "Bluetooth-signaalsterkte"
+      },
+      "controller_error_code": {
+        "name": "Controller error code"
+      },
+      "position_percentage": {
+        "name": "Positiepercentage"
+      },
+      "position_calibration": {
+        "name": "Position Calibration",
+        "state": {
+          "required": "Required",
+          "calibrating": "Calibrating",
+          "calibrated": "Calibrated"
+        }
+      },
+      "lower_travel_limit": {
+        "name": "Lower Travel Limit"
+      },
+      "upper_travel_limit": {
+        "name": "Upper Travel Limit"
+      },
+      "operation_status": {
+        "name": "Operation Status"
+      },
+      "last_successful_communication": {
+        "name": "Last successful communication"
+      },
+      "last_command": {
+        "name": "Last command"
+      },
+      "last_command_result": {
+        "name": "Last command result"
+      },
+      "last_error": {
+        "name": "Last error"
+      }
+    },
+    "button": {
+      "preset_1": {
+        "name": "Voorinstelling 1"
+      },
+      "preset_2": {
+        "name": "Voorinstelling 2"
+      },
+      "preset_3": {
+        "name": "Voorinstelling 3"
+      },
+      "preset_4": {
+        "name": "Voorinstelling 4"
+      },
+      "extend": {
+        "name": "Uitschuiven"
+      },
+      "retract": {
+        "name": "Inschuiven"
+      },
+      "fully_extend": {
+        "name": "Volledig uitschuiven"
+      },
+      "fully_retract": {
+        "name": "Volledig inschuiven"
+      },
+      "stop": {
+        "name": "Stop"
+      },
+      "calibrate_position_range": {
+        "name": "Calibrate Position Range"
+      },
+      "set_lower_travel_limit": {
+        "name": "Set Lower Travel Limit"
+      },
+      "set_upper_travel_limit": {
+        "name": "Set Upper Travel Limit"
+      },
+      "reset_travel_limits": {
+        "name": "Reset Travel Limits"
+      },
+      "rst_rehome_actuator": {
+        "name": "RST Re-home Actuator"
+      }
+    },
+    "switch": {
+      "program_preset": {
+        "name": "Voorinstelling programmeren"
+      }
+    },
+    "binary_sensor": {
+      "communication_status": {
+        "name": "Communicatiestatus"
+      }
+    },
+    "number": {
+      "position_percentage_control": {
+        "name": "Positiepercentage"
+      }
+    },
+    "lock": {
+      "control_lock": {
+        "name": "Bedieningsvergrendeling"
+      }
+    }
+  }
+}

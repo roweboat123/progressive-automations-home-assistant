@@ -1,0 +1,31 @@
+{
+  "domain": "progressive_automations",
+  "name": "Progressive Automations",
+  "version": "1.0.1",
+  "config_flow": true,
+  "documentation": "https://github.com/__GITHUB_OWNER__/progressive-automations-home-assistant#readme",
+  "issue_tracker": "https://github.com/__GITHUB_OWNER__/progressive-automations-home-assistant/issues",
+  "codeowners": [
+    "@__GITHUB_OWNER__"
+  ],
+  "iot_class": "local_push",
+  "integration_type": "device",
+  "dependencies": [
+    "bluetooth_adapters"
+  ],
+  "requirements": [],
+  "bluetooth": [
+    {
+      "service_uuid": "0000fe60-0000-1000-8000-00805f9b34fb",
+      "connectable": true
+    },
+    {
+      "service_uuid": "0000ff12-0000-1000-8000-00805f9b34fb",
+      "connectable": true
+    },
+    {
+      "local_name": "BLE DEVICE *",
+      "connectable": true
+    }
+  ]
+}

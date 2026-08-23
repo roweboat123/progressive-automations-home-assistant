@@ -1,0 +1,70 @@
+name: Bug report
+description: Report a reproducible problem with the Progressive Automations integration
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. If possible, capture **Download Diagnostics before restarting or reloading the integration**.
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant version
+      placeholder: "2026.8.2"
+    validations:
+      required: true
+  - type: input
+    id: integration_version
+    attributes:
+      label: Integration version
+      placeholder: "1.0.1"
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Controller / actuator hardware
+      placeholder: "RT-BT1, controller model if known"
+    validations:
+      required: true
+  - type: dropdown
+    id: gatt
+    attributes:
+      label: GATT layout (if known)
+      options:
+        - V2 (FE60 / FE61 / FE62)
+        - V1 (FF12 / FF01 / FF02)
+        - Unknown
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include what Home Assistant displayed and what the actuator physically did.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics / logs
+      description: Drag the Home Assistant Download Diagnostics JSON here, plus relevant log excerpts. Do not post unrelated secrets.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety acknowledgement
+      options:
+        - label: I understand this integration controls physical motion and I have kept the mechanism clear while reproducing the issue.
+          required: true
