@@ -22,6 +22,12 @@ Primary capabilities include:
 - Optional diagnostics for Bluetooth signal, communications, command history, parser recovery, and controller errors.
 - Bluetooth auto-discovery with manual-address fallback.
 
+### Beyond the official controls
+
+This integration is intended to expose more than the basic move/preset interface. It presents controller state and diagnostic information that is not normally visible through the standard RT-BT1 controls or the Progressive Motion app. Depending on controller state and which diagnostic entities are enabled, this includes calibrated physical endpoints, raw and absolute position information, controller travel-limit readback, lock and operation state, Bluetooth signal strength, last successful communication, command history and results, parser recovery activity, and communications/error counters.
+
+These values are exposed primarily for troubleshooting, validation, automation, and understanding what the controller is actually doing. They do not imply official support or that every undocumented behavior is guaranteed across all RT-BT1 hardware revisions.
+
 ## Tested hardware
 
 Development and hardware validation have centered on the **Progressive Automations RT-BT1** using the V2 GATT layout:
