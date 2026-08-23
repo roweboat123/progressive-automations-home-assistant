@@ -48,7 +48,7 @@ The stable release was validated on Home Assistant 2026.8.x. Older Home Assistan
 Until this project is accepted into HACS's default repository list, add it as a custom repository:
 
 1. Open HACS in Home Assistant.
-2. Add `https://github.com/__GITHUB_OWNER__/progressive-automations-home-assistant` as a **Custom repository** of type **Integration**.
+2. Add `https://github.com/roweboat123/progressive-automations-home-assistant` as a **Custom repository** of type **Integration**.
 3. Install **Progressive Automations**.
 4. Restart Home Assistant.
 5. Go to **Settings → Devices & services → Add Integration** and search for **Progressive Automations**.
@@ -103,6 +103,19 @@ Typical entities include:
 - **RST Re-home Actuator** — advanced recovery action.
 
 Some maintenance and diagnostic entities are intentionally disabled by default. Enable them from the Home Assistant device page when needed.
+
+### Programming presets
+
+The four preset buttons normally recall their stored positions. To save the actuator's current position into a preset:
+
+1. Move the actuator to the desired position and allow it to stop.
+2. Turn on **Program preset**.
+3. Within 10 seconds, press **Preset 1**, **Preset 2**, **Preset 3**, or **Preset 4**.
+4. The current position is saved to that preset instead of the actuator moving to it.
+
+**Program preset** is a one-shot mode. It automatically turns off after a preset is saved, or after 10 seconds if no preset button is pressed.
+
+If the 10-second window expires, the preset buttons return to their normal recall behavior.
 
 ## Optional compact dashboard card
 
