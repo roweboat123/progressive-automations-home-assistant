@@ -2,13 +2,11 @@
 
 Unofficial local Bluetooth integration for Progressive Automations RT-BT1 actuator controllers.
 
-> **Status:** v1.0.1. The controller/BLE implementation is the hardware-validated v1.0.0 codebase. v1.0.1 only updates the optional dashboard card for Home Assistant mobile/WebView compatibility and removes a redundant subtitle.
-
 This project is an independent community integration and is not affiliated with or endorsed by Progressive Automations.
 
 ## What it provides
 
-The integration exposes an RT-BT1-controlled actuator as native Home Assistant entities and communicates directly over Bluetooth Low Energy. No vendor cloud service is required.
+The integration exposes an RT-BT1-controlled actuator as native Home Assistant entities and communicates directly over Bluetooth Low Energy.
 
 Primary capabilities include:
 
@@ -33,12 +31,12 @@ Development and hardware validation have centered on the **Progressive Automatio
 | V2 | `FE60` | `FE61` | `FE62` | Hardware validated on RT-BT1 |
 | V1 | `FF12` | `FF01` | `FF02` | Supported by the integration; less extensively hardware validated |
 
-The integration is actuator-centric and does not assume that the RT-BT1 is attached to a desk or table.
+The integration is actuator-centric and does not assume what is attached to the RT-BT1.
 
 ## Requirements
 
 - Home Assistant with a working Bluetooth adapter or Bluetooth proxy path capable of reaching the RT-BT1.
-- A Progressive Automations RT-BT1-compatible controller.
+- A Progressive Automations RT-BT1-compatible controller. (https://www.progressiveautomations.ca/products/rt-bt1)
 - For local brand images, Home Assistant 2026.3 or newer is recommended.
 
 The stable release was validated on Home Assistant 2026.8.x. Older Home Assistant releases may work, but are not currently part of the tested support matrix.
@@ -84,7 +82,7 @@ Calibration is stored per device. Optional travel limits can then be set afterwa
 
 `0%` is the learned physical minimum and `100%` is the learned physical maximum.
 
-Controller travel limits are constraints on that absolute scale. They do **not** remap the scale. For example, if lower and upper travel limits correspond to 20% and 79%, the actuator remains a 0–100% calibrated device but commands are constrained to the permitted physical region.
+Controller travel limits are constraints on that absolute scale. They do **not** remap the scale. For example, if lower and upper travel limits correspond to 20% and 79%, the actuator remains a 0–100% calibrated device, but commands are constrained to the permitted physical region.
 
 ## Main entities
 
