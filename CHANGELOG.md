@@ -2,6 +2,17 @@
 
 All notable public changes to this project are documented here.
 
+## 1.0.2 - 2026-08-23
+
+### Packaging
+
+- Reordered `manifest.json` keys to satisfy Home Assistant Hassfest validation.
+- Repository metadata now passes both HACS and Hassfest validation.
+
+### Unchanged
+
+- No integration behavior, BLE protocol, controller, entity, calibration, preset, lock, travel-limit, RST, parser, motion, or dashboard behavior changed from v1.0.1.
+
 ## 1.0.1 - 2026-08-23
 
 ### Fixed
