@@ -26,7 +26,9 @@ Primary capabilities include:
 
 This integration is intended to expose more than the basic move/preset interface. It presents controller state and diagnostic information that is not normally visible through the standard RT-BT1 controls or the Progressive Motion app. Depending on controller state and which diagnostic entities are enabled, this includes calibrated physical endpoints, raw and absolute position information, controller travel-limit readback, lock and operation state, Bluetooth signal strength, last successful communication, command history and results, parser recovery activity, and communications/error counters.
 
-These values are exposed primarily for troubleshooting, validation, automation, and understanding what the controller is actually doing. They do not imply official support or that every undocumented behavior is guaranteed across all RT-BT1 hardware revisions.
+The calibrated **0–100% position model is also provided by this integration rather than reported natively by the RT-BT1**. The controller reports physical position; the integration learns the installation's true lower and upper physical endpoints and derives a percentage across that calibrated span. This makes percentage-based positioning and automation available even though the official controls do not present the actuator this way.
+
+These values and derived features are exposed primarily for troubleshooting, validation, automation, and understanding what the controller is actually doing. They do not imply official support or that every undocumented behavior is guaranteed across all RT-BT1 hardware revisions.
 
 ## Tested hardware
 
@@ -85,6 +87,8 @@ The writable percentage position uses the actuator's **true physical travel rang
 Calibration is stored per device. Optional travel limits can then be set afterward without changing the meaning of 0% and 100%.
 
 ### Percentage model
+
+The RT-BT1 does not provide a native percentage value. The integration derives percentage from the controller's physical position feedback and the physical endpoints learned during calibration.
 
 `0%` is the learned physical minimum and `100%` is the learned physical maximum.
 
