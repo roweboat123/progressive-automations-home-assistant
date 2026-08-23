@@ -3,10 +3,10 @@
   "name": "Progressive Automations",
   "version": "1.0.1",
   "config_flow": true,
-  "documentation": "https://github.com/__GITHUB_OWNER__/progressive-automations-home-assistant#readme",
-  "issue_tracker": "https://github.com/__GITHUB_OWNER__/progressive-automations-home-assistant/issues",
+  "documentation": "https://github.com/roweboat123/progressive-automations-home-assistant#readme",
+  "issue_tracker": "https://github.com/roweboat123/progressive-automations-home-assistant/issues",
   "codeowners": [
-    "@__GITHUB_OWNER__"
+    "@roweboat123"
   ],
   "iot_class": "local_push",
   "integration_type": "device",
